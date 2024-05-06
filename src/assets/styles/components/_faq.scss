@@ -1,0 +1,71 @@
+/* --------------------------------- */
+/* FAQs                              */
+/* --------------------------------- */
+
+.faqs {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 2rem;
+
+	details {
+		padding: 0.75rem 1.5rem 0.75rem 0;
+		font-size: 1.125rem;
+
+		&[open] {
+			summary {
+				&::before {
+					transform: rotate(90deg);
+				}
+				~ * {
+					transform-origin: top;
+					animation: sweep 0.2s linear;
+				}
+			}
+		}
+
+		summary {
+			display: flex;
+			align-items: center;
+
+			&::before {
+				content: url(../images/arrow_right.svg);
+				transition: transform 0.2s linear;
+				margin-right: 1rem;
+				width: 0.75rem;
+			}
+		}
+	}
+
+	summary {
+		font-weight: 400;
+		color: var(--question-color);
+		cursor: pointer;
+		outline: none;
+
+		&::hover {
+			color: var(--question-hover-color);
+		}
+	}
+
+	p {
+		margin: 0.75rem 1rem 0.5rem 2.25rem;
+	}
+}
+
+details[open] summary summary::marker {
+	color: transparent;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+@keyframes sweep {
+	0% {
+		transform: scaleY(0);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}

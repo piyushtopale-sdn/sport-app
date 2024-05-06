@@ -1,0 +1,39 @@
+/* ---------------------------- */
+/* RESPONSIVE BREAKPOINTS       */
+/* ---------------------------- */
+// @include bp(mobileplus | tabletplus | laptopplus);
+
+@mixin bp($point) {
+	@if $point == mobileplus {
+		@media (min-width: 40rem) {
+			// 480px
+			@content;
+		}
+	} @else if $point == tabletplus {
+		@media (min-width: 60rem) {
+			// 800px
+			@content;
+		}
+	} @else if $point == laptopplus {
+		@media (min-width: 70rem) {
+			// 1120px
+			@content;
+		}
+	} @else if $point == desktopplus {
+		@media (min-width: 100rem) {
+			// 1440px
+			@content;
+		}
+	}
+}
+
+/* ---------------------------- */
+/* GLASSMORPHIC EFFECT          */
+/* ---------------------------- */
+
+@mixin glassmorph {
+	background-color: rgba(0, 0, 0, 0.1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border-radius: 1rem;
+}

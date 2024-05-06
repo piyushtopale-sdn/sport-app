@@ -1,0 +1,59 @@
+:root {
+	--primary-1: #64a45f;
+	--primary-1-tint: #9bdc96;
+	--primary-2-tint: #7ec232;
+
+	--secondary-1: #545743;
+	--secondary-2: #baa08b;
+	--secondary-3: #8e7753;
+	--secondary-4: #8184ec;
+
+	--neutral-800: #1d1e22;
+	--neutral-700: #30434f; // rgb(48,67,79)
+	--neutral-600: #63666f;
+	--neutral-400: #9ea9b4;
+	--neutral-300: #c8cbcf;
+	--neutral-200: #e1e7ef;
+	--neutral-100: #fbfbfb;
+
+	--btn-default: #1e205e;
+	--btn-default: #3e42b2;
+	--btn-hover: #373ba5;
+	--btn-active: var(--neutral-600);
+	--btn-header-active: #05070a;
+	--btn-disabled: var(--neutral-700);
+	--btn-border: var(--neutral-600);
+	--btn-text: var(--neutral-100);
+	--btn-disabled-text: var(--neutral-400);
+	--badge-bg: #fb1212;
+	--badge-text: var(--neutral-100);
+
+	--btn-primary: #77a946;
+	--btn-primary-text: var(--neutral-100);
+	--btn-primary-border: var(--primary-1);
+	--btn-primary-hover: #69953e;
+	--btn-primary-hover-border: #69953e;
+	--body-bg: linear-gradient(to bottom right, #1a262e, #0e0f12);
+	--body-bg: linear-gradient(to bottom right, hsl(206, 17%, 19%), #0e0f12);
+	--body-bg: radial-gradient(circle at top, hsl(206, 17%, 25%), hsl(206, 17%, 9%));
+	--text: var(--neutral-100);
+
+	--header-bg: var(--neutral-700);
+
+	--link: var(--primary-1);
+	--link-hover: var(--primary-1-tint);
+
+	--nav-secondary: var(--neutral-300);
+	--nav-secondary-hover: var(--neutral-100);
+	--nav-secondary-active: var(--secondary-4);
+
+	--success: #7ec232; // rgb(126, 194, 50)
+	--error: #990000;
+	--error-hover: #ff0000;
+
+	--counter-field-bg: var(--neutral-800);
+	--counter-field-text: var(--neutral-100);
+
+	--question-color: var(--neutral-300);
+	--question-hover-color: var(--neutral-100);
+}

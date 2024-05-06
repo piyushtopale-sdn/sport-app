@@ -1,0 +1,54 @@
+.not-found {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.not-found .inner {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 450px;
+  width: 90%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.not-found .inner h2 {
+  font-size: 5.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 0;
+}
+
+.not-found .inner h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.not-found .inner p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 639px) {
+  .not-found {
+    padding-top: 6rem;
+  }
+  .not-found .inner {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+}
+/*# sourceMappingURL=NotFound.css.map */

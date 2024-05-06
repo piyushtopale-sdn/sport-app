@@ -1,0 +1,123 @@
+#groupPromoteMember {
+    .modal__body {
+        max-width: 100%;
+
+        .modal-auth-content {
+            max-width: 32.938rem;
+            margin: 0 auto;
+            width: 100%;
+            @media (min-width: 1200px) {
+                max-width: 40rem;
+            }
+        }
+
+        p {
+            font-family: "Roboto", sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            line-height: 1.75rem;
+        }
+
+        .form {
+            gap: 1.5rem;
+
+            .form-control {
+                margin-bottom: 0;
+                gap: 0;
+
+                .form-control__input {
+                    padding: 0.688rem 0.75rem;
+                    font-size: 1rem;
+                }
+            }
+
+            .form-control--actions {
+                margin-top: 1.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                p {
+                    margin-bottom: 0;
+                    font-size: 1.25rem;
+                }
+
+                span {
+                    color: var(--btn-secondary);
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--btn-secondary-hover);
+                    }
+                }
+
+                .btn {
+                    min-width: 222px;
+                    width: 100%;
+                    line-height: 2.188rem;
+                    height: auto;
+                    padding: 0 1.5rem;
+                    background: var(--btn-secondary);
+                    font-size: 1rem;
+                    font-weight: 400;
+                    border-radius: 4px;
+
+                    &:hover {
+                        background: var(--btn-secondary-hover);
+                    }
+
+                    &-purple {
+                        background: var(--btn-purple);
+
+                        &:hover {
+                            background: var(--btn-purple);
+                        }
+                    }
+                }
+
+                @media (max-width: 575px) {
+                    flex-direction: column;
+                    margin-top: 0.5rem;
+
+                    .login-action-btn-wrp {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+
+            .divider {
+                height: 1px;
+                background: rgba(255, 255, 255, 0.1);
+                border: 0px;
+                width: 100%;
+            }
+        }
+
+        .login-bottom {
+            width: 100%;
+            gap: 0.5rem;
+        }
+    }
+}
+.forgot-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.forgotpassword {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    color: #0092ff;
+    cursor: pointer;
+    padding-left: 0.5rem;
+}
+.error-wrap {
+    flex-grow: 1;
+}
+.login-btn-wrap {
+    justify-content: flex-end !important;
+    margin: 0 !important;
+}

@@ -1,0 +1,148 @@
+footer {
+    margin: auto;
+    padding: 1.563rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @media(min-width:320px) {
+
+        max-width: 90%;
+        margin: 0 auto;
+
+    }
+
+    @media(min-width:1200px) {
+
+        max-width: calc(100% - 162px);
+        margin: 0 auto;
+
+    }
+
+    @media(min-width:1700px) {
+
+        max-width: 1648px;
+        margin: 0 auto;
+
+    }
+}
+
+footer div {
+    width: 345px;
+    flex-shrink: 1;
+}
+
+footer div.social-media {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            width: auto;
+            padding: 0.5rem;
+
+            a {
+                color: #9EA9B4;
+                font-size: 1.5rem;
+
+                &:hover {
+                    color: #0092FF
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: #9EA9B4;
+    font-weight: 400;
+    order: 0;
+
+    span {
+        //color: #C8CBCF;
+        width: 100%;
+        display: block;
+        padding-top: 4px;
+    }
+}
+
+.legal-links {
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+            padding: 0 1rem;
+
+            a {
+                color: #9EA9B4;
+                font-size: 0.875rem;
+                font-weight: 400;
+
+                &:hover {
+                    color: #0092FF;
+                }
+            }
+        }
+    }
+}
+
+.youtube a {
+    font-size: 2rem !important;
+}
+
+@media(max-width:991px) {
+    footer {
+        padding: 1rem 0;
+    }
+
+    .copyright,
+    .legal-links {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media(max-width:767px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer div {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    footer div.social-media ul li {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .legal-links {
+        justify-content: center;
+        order: 0;
+    }
+
+    .copyright {
+        order: 3;
+        margin-top: 0.8rem;
+        font-size: 0.8rem;
+    }
+}

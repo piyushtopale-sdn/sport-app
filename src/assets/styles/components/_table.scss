@@ -1,0 +1,145 @@
+/* --------------------------------- */
+/* TABLE                             */
+/* --------------------------------- */
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+
+	/* DATA TABLE --------- */
+
+	&.data-table {
+		margin: 0 auto 3rem;
+
+		td {
+			vertical-align: top;
+
+			&.text-center {
+				text-align: left;
+
+				@include bp(mobileplus) {
+					text-align: right;
+				}
+			}
+		}
+
+		&--cart {
+			td.text-right {
+				text-align: left;
+
+				@include bp(mobileplus) {
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	thead {
+		display: none;
+
+		@include bp(mobileplus) {
+			display: table-header-group;
+		}
+	}
+
+	tr {
+		display: grid;
+		padding: 1rem;
+		border: 1px solid var(--neutral-700);
+		border-radius: 0.25rem;
+		margin-bottom: 1rem;
+
+		@include bp(mobileplus) {
+			display: table-row;
+			border: none;
+			border-bottom: 1px solid var(--neutral-700);
+		}
+	}
+
+	th,
+	td {
+		text-align: left;
+		padding: 0.5rem;
+	}
+
+	th {
+		color: var(--neutral-400);
+
+		&.col-quantity {
+			width: 10rem;
+		}
+		&.col-total {
+			width: 10rem;
+		}
+	}
+
+	td {
+		font-weight: 500;
+
+		@include bp(mobileplus) {
+			font-weight: 400;
+		}
+
+		&::before {
+			content: attr(data-label);
+			display: block;
+			margin-bottom: 0.25rem;
+			color: var(--neutral-400);
+
+			@include bp(mobileplus) {
+				display: none;
+			}
+		}
+
+		border-width: 1px 0;
+		color: var(--neutral-500);
+		line-height: 1.4;
+	}
+
+	/* TABLE ROW ACTIONS --------- */
+	/* Last Column --------------- */
+
+	.row-action {
+		text-align: right;
+		padding: 0;
+
+		@include bp(mobileplus) {
+			padding: 0.5rem;
+		}
+	}
+
+	&.table--listings {
+		margin-top: 1.5rem;
+
+		th {
+			font-size: 0.875rem;
+		}
+		td {
+			vertical-align: middle;
+			font-size: 0.875rem;
+
+			&.add-to-cart {
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+
+		input[type="text"].counter__value {
+			background-color: var(--neutral-700);
+			font-size: 0.875rem;
+			width: 3rem;
+		}
+
+		.btn--counter img {
+			width: 0.75rem;
+		}
+
+		.btn--x-small {
+			margin-left: 1rem;
+		}
+	}
+}
+
+.counter input[type="text"].counter__value {
+	background-color: var(--neutral-700);
+}

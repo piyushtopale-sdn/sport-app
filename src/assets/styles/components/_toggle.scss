@@ -1,0 +1,98 @@
+/* --------------------------------- */
+/* TOGGLE BUTTON                     */
+/* --------------------------------- */
+
+.toggle {
+	display: inline-flex;
+	gap: 0.625rem;
+	justify-content: space-around;
+	align-items: center;
+
+	&__label {
+		color: var(--neutral-200);
+		user-select: none;
+
+		&.selected {
+			color: #64a45f;
+			font-weight: 500;
+		}
+	}
+
+	&__btn {
+		color: transparent;
+		padding: 0.25rem;
+		border: 2px solid #64a45f;
+		background-color: transparent;
+		border-radius: 1rem;
+		height: 1.5rem;
+		width: 3rem;
+		min-width: 3rem;
+		cursor: pointer;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0.18rem;
+			top: 0.125rem;
+			width: 1rem;
+			height: 1rem;
+			border-radius: 50%;
+			background-color: #64a45f;
+			transform: translateX(0);
+			transition: transform 0.15s ease;
+		}
+
+		&:hover {
+			background-color: var(--neutral-700);
+		}
+
+		&.selected {
+			&::before {
+				transform: translateX(1.45rem);
+			}
+		}
+	}
+
+	/* SMALLER VERSION - For My NFTs */
+	&--small {
+		gap: 0.375rem;
+		font-size: 0.75rem;
+
+		.toggle__btn {
+			color: transparent;
+			padding: 0.25rem;
+			border: 2px solid #64a45f;
+			background-color: transparent;
+			border-radius: 1rem;
+			height: 1rem;
+			width: 2rem;
+			min-width: 2rem;
+			cursor: pointer;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0.17rem;
+				top: 0.125rem;
+				width: 0.5rem;
+				height: 0.5rem;
+				border-radius: 50%;
+				background-color: #64a45f;
+				transform: translateX(0);
+				transition: transform 0.15s ease;
+			}
+
+			&:hover {
+				background-color: var(--neutral-700);
+			}
+
+			&.selected {
+				&::before {
+					transform: translateX(0.9rem);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,241 @@
+/* --------------------------------- */
+/* PRIMARY NAV                       */
+/* --------------------------------- */
+
+.nav-primary {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	z-index: 9;
+	padding: 5.5rem 1rem 1rem 1rem;
+	transform: scale(0);
+	transition: transform 0.5s;
+
+	&.is-visible {
+		transform: scale(1);
+	}
+
+	.container {
+		width: min(90%, 70rem);
+		height: 95%;
+		margin: 0 auto;
+		display: grid;
+
+		@include bp(mobileplus) {
+			grid-template-columns: 1.5fr 1fr;
+			grid-template-rows: 1fr 1fr;
+		}
+	}
+
+	@include bp(mobileplus) {
+		padding: 8rem 2rem;
+	}
+
+	.nav__video {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		padding-bottom: 0.75rem;
+		margin-bottom: 0.5rem;
+		visibility: hidden;
+
+		@include bp(mobileplus) {
+			border-bottom: 0;
+		}
+	}
+
+	.video {
+		width: 60%;
+		max-width: 20rem;
+		aspect-ratio: 16/9;
+		background-color: var(--neutral-800);
+		display: grid;
+		place-content: center;
+
+		@include bp(mobileplus) {
+			width: 90%;
+			max-width: 30rem;
+			aspect-ratio: 16/9;
+		}
+
+		img {
+			width: 1.75rem;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		margin-bottom: 0.75rem;
+		padding-bottom: 0.7rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		max-width: 15rem;
+
+		@include bp(mobileplus) {
+			gap: 1.5rem;
+			border-bottom: none;
+		}
+
+		a {
+			font-size: 1.25rem;
+			font-weight: 300;
+
+			@include bp(tabletplus) {
+				font-size: 1.5rem;
+			}
+
+			&.btn--discord {
+				font-size: 1.125rem;
+				font-weight: 400;
+				background-color: var(--btn-default);
+				border: none;
+
+				&:hover {
+					background-color: var(--btn-hover);
+					color: var(--neutral-100);
+				}
+			}
+		}
+
+		.btn--icon {
+			background-color: var(--neutral-700);
+			width: 2.25rem;
+			height: 2.25rem;
+			margin-left: 1rem;
+
+			.btn__badge {
+				top: -0.5rem;
+				right: -0.5rem;
+			}
+		}
+	}
+
+	&__footer {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+
+		@include bp(mobileplus) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&__social {
+		order: 2;
+		align-self: end;
+	}
+
+	.legalese {
+		align-self: end;
+		order: 3;
+		margin-top: 1rem;
+
+		@include bp(mobileplus) {
+			order: 1;
+			margin-top: 2rem;
+		}
+
+		p,
+		a {
+			font-size: 0.875rem;
+
+			@include bp(mobileplus) {
+				font-size: 0.875rem;
+			}
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+		a {
+			&:not(:last-child) {
+				border-right: 1px solid var(--neutral-400);
+				padding-right: 1rem;
+				margin-right: calc(1rem - 3px);
+			}
+		}
+	}
+
+	.social-links {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		.btn--icon {
+			border: 1px solid var(--neutral-800);
+			border-radius: 50%;
+			width: 2.5rem;
+			height: 2.5rem;
+			display: grid;
+			place-content: center;
+
+			img.facebook {
+				height: 1.5rem;
+			}
+			img {
+				width: 1.5rem;
+
+				&.facebook {
+					height: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+/* --------------------------------- */
+/* SECONDARY NAV - My Account        */
+/* --------------------------------- */
+
+.nav-secondary {
+	position: absolute;
+	top: 2.5rem;
+	padding: 1rem;
+	background: linear-gradient(to bottom right, hsl(206, 17%, 19%), #252e35);
+	border: 1px solid var(--neutral-600);
+	border-radius: 0.5rem;
+	width: 20rem;
+	z-index: 200;
+	transform-origin: top;
+	transform: scaleY(0);
+	transition: transform 0.3s ease-in-out;
+
+	@include bp(tabletplus) {
+		position: static;
+		border: none;
+		transform: scaleY(1);
+		margin: 1rem 1rem 0 0;
+		width: 18rem;
+		padding: 1.5rem;
+		border-radius: 0.75rem;
+	}
+
+	&.is-active {
+		transform: scaleY(1);
+	}
+
+	a {
+		display: block;
+		font-size: 1.25rem;
+		font-weight: 300;
+		padding: 0.75rem;
+		color: var(--nav-secondary);
+		border-radius: 0.25rem;
+
+		&:hover {
+			color: var(--nav-secondary-hover);
+		}
+
+		&.active {
+			color: var(--nav-secondary-active);
+			font-weight: 500;
+		}
+	}
+}

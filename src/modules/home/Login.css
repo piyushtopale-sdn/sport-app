@@ -1,0 +1,114 @@
+#groupPromoteMember .modal__content {
+  max-width: 1003px !important;
+  width: 94%;
+}
+
+#groupPromoteMember .modal__body {
+  max-width: 100%;
+}
+
+#groupPromoteMember .modal__body .modal-auth-content {
+  max-width: 32.938rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#groupPromoteMember .modal__body p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.75rem;
+}
+
+#groupPromoteMember .modal__body .form {
+  gap: 1.5rem;
+}
+
+#groupPromoteMember .modal__body .form .form-control {
+  margin-bottom: 0;
+  gap: 0;
+}
+
+#groupPromoteMember .modal__body .form .form-control .form-control__input {
+  padding: 0.688rem 0.75rem;
+  font-size: 1rem;
+}
+
+#groupPromoteMember .modal__body .form .form-control--actions {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#groupPromoteMember .modal__body .form .form-control--actions p {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
+#groupPromoteMember .modal__body .form .form-control--actions span {
+  color: var(--btn-secondary);
+  cursor: pointer;
+}
+
+#groupPromoteMember .modal__body .form .form-control--actions span:hover {
+  color: var(--btn-secondary-hover);
+}
+
+#groupPromoteMember .modal__body .form .form-control--actions .btn {
+  min-width: 222px;
+  width: 100%;
+  line-height: 35px;
+  height: auto;
+  padding: 0 1.5rem;
+  background: var(--btn-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+#groupPromoteMember .modal__body .form .form-control--actions .btn:hover {
+  background: var(--btn-secondary-hover);
+}
+
+#groupPromoteMember .modal__body .form .form-control--actions .btn-purple {
+  background: var(--btn-purple);
+}
+
+#groupPromoteMember .modal__body .form .form-control--actions .btn-purple:hover {
+  background: var(--btn-purple);
+}
+
+@media (max-width: 575px) {
+  #groupPromoteMember .modal__body .form .form-control--actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0.5rem;
+  }
+  #groupPromoteMember .modal__body .form .form-control--actions .login-action-btn-wrp {
+    margin-top: 1rem;
+  }
+}
+
+#groupPromoteMember .modal__body .form .divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0px;
+  width: 100%;
+}
+
+#groupPromoteMember .modal__body .login-bottom {
+  width: 100%;
+  gap: 0.5rem;
+}
+/*# sourceMappingURL=Login.css.map */

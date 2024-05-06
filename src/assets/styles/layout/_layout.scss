@@ -1,0 +1,321 @@
+/* --------------------------------- */
+/* BODY                              */
+/* --------------------------------- */
+
+body {
+	background: var(--body-bg);
+	min-height: 100vh;
+}
+
+.main {
+	padding: 2rem 0;
+
+	@include bp(tabletplus) {
+		padding: 4rem 0;
+	}
+}
+
+.container {
+	width: min(100% - 2rem, 70rem);
+	margin: 0 auto;
+
+	&--centered {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		> h1,
+		h2,
+		h3,
+		p,
+		div {
+			text-align: center;
+		}
+	}
+
+	&--with-sidebar {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		@include bp(tabletplus) {
+			flex-direction: row;
+			gap: 4rem;
+		}
+	}
+
+	&--with-nft-sidebar {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		@include bp(tabletplus) {
+			flex-direction: row;
+			gap: 0rem;
+		}
+	}
+
+	&--return {
+		margin: 2rem auto;
+		a {
+			display: inline-flex;
+			gap: 0.5rem;
+			align-items: center;
+		}
+		img {
+			height: 1.25rem;
+		}
+	}
+
+	&--overlay {
+		background-color: rgba(0, 0, 0, 0.1);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		border-radius: 1rem;
+		padding: 1rem;
+
+		@include bp(mobileplus) {
+			padding: 2rem 3rem;
+		}
+	}
+}
+
+/* SIDEBAR --------- */
+.sidebar {
+	padding-top: 0;
+	margin-bottom: 1.5rem;
+
+	@include bp(tabletplus) {
+		padding-top: 6rem;
+		width: 16rem;
+	}
+
+	&--nft {
+		width: 100%;
+		padding-top: 0;
+		margin-bottom: 0;
+		display: flex;
+		justify-content: center;
+
+		@include bp(tabletplus) {
+			width: 50%;
+			padding-top: 4rem;
+		}
+	}
+}
+
+.nft {
+	&__image {
+		padding: 1rem;
+		border: 1px solid var(--neutral-600);
+		border-radius: 0.5rem;
+	}
+
+	&__3d {
+		// backdrop-filter: blur(5px);
+		border-radius: 0.5rem;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+/* CONTENT --------- */
+.content {
+	flex: 1;
+	padding: 1rem;
+	@include glassmorph;
+
+	@include bp(mobileplus) {
+		padding: 0;
+		background-color: transparent;
+		border-radius: 0;
+		-webkit-backdrop-filter: unset;
+		backdrop-filter: unset;
+	}
+
+	&__section-title {
+		font-size: 0.875rem;
+		margin-left: 0.25rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 400;
+		color: var(--neutral-400);
+		display: none;
+
+		@include bp(tabletplus) {
+			display: block;
+		}
+	}
+
+	h1 {
+		margin-bottom: 2rem;
+	}
+
+	&--nft {
+		width: 100%;
+		padding: 2rem;
+
+		@include bp(tabletplus) {
+			padding: 2rem 0;
+			width: 50%;
+		}
+	}
+}
+
+/* SECTION (for text content) --------- */
+.text-content {
+	padding-bottom: 2rem;
+	> h1 {
+		margin-top: 2rem;
+	}
+
+	h2,
+	h3 {
+		margin: 2rem 0 1rem;
+	}
+
+	p:first-child {
+		margin-top: 0;
+	}
+}
+
+/* UTILS */
+.cta {
+	padding: 2rem 0;
+
+	&--cart {
+		text-align: right;
+	}
+
+	.btn {
+		width: 100%;
+
+		@include bp(mobileplus) {
+			width: auto;
+		}
+	}
+}
+
+/* SPACERS --- */
+.spacer {
+	margin: 2rem 0;
+
+	&--top {
+		margin: 2rem 0 0;
+	}
+}
+
+/* MESH --------- */
+.top-left,
+.top-right,
+.bottom-left {
+	position: fixed;
+	z-index: -1;
+	pointer-events: none;
+	width: 960px;
+	height: 540px;
+
+	@include bp(mobileplus) {
+		width: 1280px;
+		height: 720px;
+	}
+
+	@include bp(tabletplus) {
+		width: 1920px;
+		height: 1080px;
+	}
+}
+.top-left {
+	background: url(../images/top_left.svg) no-repeat;
+	top: 0;
+	left: 0;
+	transform: scale(0.7);
+	transform-origin: top left;
+}
+
+.bottom-left {
+	background: url(../images/bottom_left.svg) no-repeat;
+	bottom: 0;
+	left: 0;
+	transform: scale(0.7);
+	transform-origin: bottom left;
+}
+
+.top-right {
+	background: url(../images/top_right.svg) no-repeat;
+	top: 0;
+	right: 0;
+	transform: scale(0.7);
+	transform-origin: top right;
+}
+
+/* Separator --------- */
+
+hr.separator {
+	border: 0;
+	height: 1px;
+	background-color: var(--neutral-700);
+	margin: 1rem 0;
+	position: relative;
+
+	&--dot {
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background-color: var(--primary-1);
+	}
+}
+
+/* Campaign and Share --------- */
+.campaign-share {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
+
+	@include bp(mobileplus) {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+		font-weight: 300;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+/* Buy Block --------- */
+.buy {
+	h4 {
+		font-size: 1.125rem;
+		font-weight: 400;
+		color: var(--neutral-300);
+	}
+	.currency {
+		font-size: 1.5rem;
+	}
+	.form-control__label {
+		margin-left: 0;
+	}
+}
+
+/* Price History --------- */
+.pricehistory {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 2rem;
+
+		h4 {
+			font-size: 1.125rem;
+			font-weight: 400;
+			color: var(--neutral-300);
+		}
+	}
+}

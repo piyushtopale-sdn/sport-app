@@ -1,0 +1,193 @@
+/* --------------------------------- */
+/* BUTTONS                           */
+/* --------------------------------- */
+
+button,
+.btn {
+    background-color: var(--btn-default);
+    color: var(--btn-text);
+    border: 1px solid var(--btn-border);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 40px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+
+    @include bp(tabletplus) {
+        font-size: 1.125rem;
+        min-width: 275px;
+        height: 20px;
+    }
+
+    &:hover {
+        background-color: var(--btn-hover);
+    }
+
+    &:active {
+        background-color: var(--btn-active);
+    }
+
+    &:disabled {
+        background-color: var(--btn-disabled);
+        color: var(--btn-disabled-text);
+        border-color: var(--btn-disabled);
+    }
+
+    &--small {
+        padding: 0.5rem 1rem;
+        min-width: unset;
+        width: auto;
+        height: auto;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    &--x-small {
+        padding: 0.375rem 0.5rem;
+        min-width: unset;
+        width: auto;
+        height: auto;
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    &--primary {
+        background-color: var(--btn-primary);
+        color: var(--btn-primary-text);
+        border: 1px solid var(--btn-primary-border);
+
+        &:hover {
+            background-color: var(--btn-primary-hover);
+            border: 1px solid var(--btn-primary-hover-border);
+        }
+    }
+
+    &--transparent {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    &--combo {
+        display: inline-flex;
+        gap: 0.75rem;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 1.5rem;
+        }
+    }
+
+    &--regular {
+        width: auto;
+        min-width: 200px;
+        line-height: 1;
+    }
+
+    &--remove {
+        background-color: var(--error);
+        border-color: transparent;
+
+        &:hover {
+            background-color: var(--error-hover);
+        }
+    }
+
+    &--full-width {
+        width: 100%;
+    }
+
+    &--phantom {
+        background-color: var(--neutral-700);
+        border-color: transparent;
+        height: auto;
+    }
+
+    &--icon {
+        background-color: transparent;
+        border-color: transparent;
+        padding: 0.25rem;
+        min-width: unset;
+        width: auto;
+        aspect-ratio: 1;
+        display: inline-grid;
+        place-content: center;
+        border-radius: 50%;
+
+        img {
+            width: 1rem;
+        }
+
+        & + .btn--icon {
+            margin-top: 0;
+        }
+    }
+
+    &--search,
+    &--copy {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.25rem;
+        display: grid;
+        place-content: center;
+    }
+
+    &--sidebar-menu {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background-color: #252e35;
+        white-space: nowrap;
+        width: 15rem;
+
+        @include bp(tabletplus) {
+            display: none;
+        }
+
+        &:hover {
+            background-color: #192024;
+        }
+
+        img {
+            height: 1.25rem;
+        }
+    }
+
+    &--discord {
+        margin-top: 1rem;
+
+        @include bp(mobileplus) {
+            margin-top: 0;
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: -0.25rem;
+        right: -0.25rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        font-size: 0.75rem;
+        display: grid;
+        place-content: center;
+        border-radius: 50%;
+        background-color: var(--badge-bg);
+        color: var(--badge-text);
+    }
+
+    + button {
+        margin-top: 1rem;
+
+        @include bp(mobileplus) {
+            margin-top: 0;
+            margin-left: 1rem;
+        }
+    }
+}
+
+/* UTILS --- */
+[data-href] {
+    cursor: pointer;
+}
